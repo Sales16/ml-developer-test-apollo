@@ -21,7 +21,7 @@ def plot_knn_results(knn_results_euclidean, knn_results_cosine):
         plt.title("Comparação de F1-Score")
         plt.legend()
 
-        plt.subplot(1, 4, 4)
+        plt.subplot(1, 4, 3)
         plt.plot(knn_results_euclidean["k"], knn_results_euclidean["Top-k Accuracy"], marker='o', label='Euclidean')
         plt.plot(knn_results_cosine["k"], knn_results_cosine["Top-k Accuracy"], marker='s', label='Cosine')
         plt.xlabel("k")
