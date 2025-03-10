@@ -2,30 +2,34 @@ import pickle
 import pandas as pd
 import numpy as np
 
-def load_data(file):
+def load_data(filepath):
+    """
+    Carrega os dados do arquivo pickle.
+    """
     try:
-        with open(file, 'rb') as f:
-            data = pickle.load(f)
+        with open(filepath, 'rb') as f:
+            return pickle.load(f)
     except Exception as e:
-        print(f"Erro ao carregar arquivo: {e}")
-        data = None
-    return data
+        print(f"Erro ao carregar os dados: {e}")
+        return None
 
-def processing_data(data):
+def process_data(data):
+    """
+    Processa os dados e os organiza em um DataFrame.
+    """
     try:
-        result = []
+        records = []
         for syndrome_id, subjects in data.items():
             for subject_id, images in subjects.items():
                 for image_id, embedding in images.items():
-                    result.append([syndrome_id, subject_id, image_id, embedding])
+                    records.append([syndrome_id, subject_id, image_id, np.array(embedding)])
         
-        df = pd.DataFrame(result, columns=["syndrome_id", "subject_id", "image_id", "embedding"])
-        df["embedding"] = df["embedding"].apply(lambda x: np.array(x))
+        df = pd.DataFrame(records, columns=["syndrome_id", "subject_id", "image_id", "embedding"])
         
         if df.isnull().values.any():
-            print("Aviso: Há valores ausentes nos dados!")
+            print("Aviso: Existem valores ausentes nos dados!")
         
         return df
     except Exception as e:
-        print(f"Erro ao processar dados: {e}")
+        print(f"Erro ao processar os dados: {e}")
         return None
