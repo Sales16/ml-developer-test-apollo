@@ -1,0 +1,10 @@
+1. Comparação entre Distância Euclidiana e Cosseno
+
+Métricas para os melhores valores de k
+Distância | Melhor k | Accuracy | F1-Score | AUC
+Euclidiana | 15 | 76.3% | 75.4% | 95.3%
+Cosseno | 15 | 79.4% | 78.7% | 96.5%
+
+A distância Cosseno teve um desempenho melhor que a Euclidiana, com maior Accuracy, F1-score e AUC.
+
+O desempenho de Accuracy e F1-Score estabiliza a partir de k=7-15, sugerindo que o modelo atinge um ponto ótimo nessa faixa.
