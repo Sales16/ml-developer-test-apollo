@@ -3,9 +3,6 @@ import pandas as pd
 import numpy as np
 
 def load_data(filepath):
-    """
-    Carrega os dados do arquivo pickle.
-    """
     try:
         with open(filepath, 'rb') as f:
             return pickle.load(f)
@@ -14,9 +11,6 @@ def load_data(filepath):
         return None
 
 def process_data(data):
-    """
-    Processa os dados e os organiza em um DataFrame.
-    """
     try:
         records = []
         for syndrome_id, subjects in data.items():
