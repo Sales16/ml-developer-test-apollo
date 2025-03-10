@@ -13,7 +13,7 @@ def exploratory_analysis(df):
     
     plt.figure(figsize=(10, 5))
     syndrome_counts = df['syndrome_id'].value_counts()
-    sns.barplot(x=syndrome_counts.index, y=syndrome_counts.values, palette='viridis')
+    sns.barplot(x=syndrome_counts.index, y=syndrome_counts.values, hue=syndrome_counts.index, palette='viridis', legend=False)
     plt.xlabel("ID Síndrome")
     plt.ylabel("Número de Imagens")
     plt.title("Distribuição de Imagens por Síndrome")
