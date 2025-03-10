@@ -1,6 +1,6 @@
-# Teste Prático Machine Learning Junior 
+# Teste Prático Desenvolvedor de Software Júnior 
 
-Este repositório contém a implementação do teste prático para a posição de **Machine Learning Junior**. O objetivo do projeto é realizar a **classificação de imagens associadas a síndromes genéticas** utilizando embeddings previamente gerados. O pipeline inclui **processamento de dados, análise exploratória, treinamento de modelo KNN e avaliação dos resultados**.
+Este repositório contém a implementação do teste prático para a posição de **Desenvolvedor de Software Júnior**. O objetivo do projeto é realizar a **classificação de imagens associadas a síndromes genéticas** utilizando embeddings previamente gerados. O pipeline inclui **processamento de dados, análise exploratória, treinamento de modelo KNN e avaliação dos resultados**.
 
 ## Estrutura do Projeto
 
